@@ -37,7 +37,7 @@
 
                 <div class="col-md-12 most-viewed-post mt-4">
                     <a href="">
-                        <img src="images/adr2.png" class="img-fluid" alt="">
+                        <img src="/images/adr2.png" class="img-fluid" alt="">
                     </a>
                 </div>
 

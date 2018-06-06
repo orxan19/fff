@@ -85,4 +85,14 @@ class PostsController extends Controller
 
         return view('featured', compact('posts'));
     }
+
+    public function query(Request $request){
+       $query = $request->get('query');
+
+        $posts = Post::where('title', 'like', '%'.$query.'%')->orWhere('description', 'like', '%'.$query.'%')->orderBy('created_at', 'desc')->take(20)->get();
+
+        $posts_count = $posts->count();
+
+        return view('search', compact('posts', 'query', 'posts_count'));
+    }
 }

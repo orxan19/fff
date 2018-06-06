@@ -11,19 +11,22 @@
                     <div class="player-header">{{$post->title}}
                     </div>
 
-                    <video id="my-video" class="video-js" controls preload="auto"
-                           poster="/images/{{$post->image}}" data-setup="{}">
-                        <source src="/{{ $post->source }}" type='video/mp4'>
-                        <p class="vjs-no-js">
-                            To view this video please enable JavaScript, and consider upgrading to a web browser that
-                            <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-                        </p>
+                    <video crossorigin="" playsinline="" poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg" id="playerr" src="/videos/video.mp4">
+                        <!-- Video files -->
+                        <source src="/videos/video.mp4" type="video/mp4" size="576">
+                        <source src="/videos/videoplayback.mp4" type="video/mp4" size="360" >
+
+                        <!-- Caption files -->
+                        <track kind="captions" label="English" srclang="en" src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt" default="">
+                        <track kind="captions" label="Français" srclang="fr" src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.fr.vtt">
+
+                        <!-- Fallback for browsers that don't support the <video> element -->
+                        <a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" download="">Download</a>
                     </video>
 
                     <div class="container">
                         <div class="player-info">
-                            <div class="row">
-                                <h5  class="category-name pl-1" style="border-left: 5px solid #{{$post->category->color}};">{{ $post->category->title }}</h5>
+                            <div class="row"><h5  class="category-name pl-1" style="border-left: 5px solid #{{$post->category->color}};">{{ $post->category->title }}</h5>
 
                                 <div class="ml-auto">
                                     <div class="row">

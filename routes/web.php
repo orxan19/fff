@@ -10,4 +10,6 @@ Route::get('/popular', 'PostsController@most_viewed');
 
 Route::get('/featured', 'PostsController@featured');
 
+Route::get('/query', 'PostsController@query');
+
 

@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
           integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link href="https://vjs.zencdn.net/7.0.3/video-js.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.3.10/plyr.css">
     <title>Document</title>
 </head>
 <body>
@@ -32,7 +32,6 @@
 
 <script src="/js/app.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script src="https://vjs.zencdn.net/7.0.3/video.js"></script>
 <script>$('.responsive').slick({
         dots: false,
         infinite: true,
