@@ -11,8 +11,7 @@
                         <div class="row border-bottom">
 
                             <div class="category-name mx-auto">
-                                <h3><span class="most-viewed-icon category-icon"><i class="fas fa-thumbs-up"></i> </span>
-                                    Redaktorun seçimi
+                                <h3><span class="category-icon"><i class="fa fa-users"></i></span> Ən çox izlənilənlər
                                 </h3>
                             </div>
 

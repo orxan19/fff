@@ -71,9 +71,18 @@ class PostsController extends Controller
         //
     }
 
-    public function featured(){
+    public function most_viewed(){
+//        $posts = Post::where('is_featured', 1)->orderBy('created_at', 'desc')->paginate(12);
+
+        $posts = Post::orderBy('views','desc')->paginate(12);
+
+
+        return view('most_viewed', compact('posts'));
+    }
+
+    public function featured() {
         $posts = Post::where('is_featured', 1)->orderBy('created_at', 'desc')->paginate(12);
 
-        return view('featured');
+        return view('featured', compact('posts'));
     }
 }

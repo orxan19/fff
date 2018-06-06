@@ -10,15 +10,13 @@
             <div class="col-md-8">
 
                 <div class="post-all">
-                    <div class="row border-bottom">
+                    <div class="row border-bottom ">
 
-                        <div class="category-name">
-                            <h3><a href="/category/{{$category->id}}"><span class="category-icon"><i class="{{$category->icon}}"></i></span> {{ucfirst($category->title)}}</a>
+                        <div class="category-name mx-auto">
+                            <h3 class="pl-4"><a href="/category/{{$category->id}}"><span class="category-icon"><i class="{{$category->icon}}"></i></span> {{ucfirst($category->title)}}</a>
                             </h3>
                         </div>
 
-                        <div class="category-more ml-auto"><a href="">Bütün videolara bax <span
-                                        class="category-more-icon"><i class="fa fa-angle-double-right"></i></span></a></div>
 
                     </div>
 
@@ -50,7 +48,7 @@
 
 
                     </div>
-                    <div class="text-center mt-4">
+                    <div class="row justify-content-center mt-4">
                         {{$posts->render()}}
                     </div>
                 </div>

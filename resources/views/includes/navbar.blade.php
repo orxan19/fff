@@ -19,24 +19,15 @@
 
             <div class="ml-auto">
                 <ul class="navbar-nav flex-row navbar-social">
-                    <li class="nav-item">
-
-                        <div class="dropdown">
-                            <button class="fa fa-search dropdown-button drop"></button>
-                            <div class="dropdown-content">
-                                <form class="form-inline my-2 my-lg-0">
-                                    <div class="row">
-                                        <input class="dropdown-content-input" type="search" placeholder="Axtar"
-                                               aria-label="Search">
-                                </form>
-                            </div>
-                        </div>
-
+                    <li class="nav-item mx-auto mx-lg-auto">
+                            <form class="d-flex">
+                                <input class="form-control" type="search" placeholder="Axtar" aria-label="Search">
+                                <button class="btn btn-outline-success ml-2 fa fa-search" type="submit"></button>
+                            </form>
                     </li>
-                    <li class="nav-item ml-auto "><a href="" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                    <li class="nav-item"><a href=""><i class="fab fa-twitter"></i></a></li>
-                    <li class="nav-item"><a href=""><i class="fab fa-instagram"></i></a></li>
-                    <li class="nav-item"><img src="/images/az.png" class="nav-flag" alt=""></li>
+                    {{--<li class="nav-item ml-auto "><a href="" target="_blank"><i class="fab fa-facebook-f"></i></a></li>--}}
+                    {{--<li class="nav-item"><a href=""><i class="fab fa-twitter"></i></a></li>--}}
+                    {{--<li class="nav-item"><a href=""><i class="fab fa-instagram"></i></a></li>--}}
                 </ul>
 
 

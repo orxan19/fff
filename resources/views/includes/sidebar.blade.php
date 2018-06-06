@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-md-11">
             <div class="most-viewed-header border-bottom">
-                <h2><a href="/featured"><span class="most-viewed-icon"><i class="fas fa-bolt"></i></span> Ən çox izlənilənlər</a>
+                <h2><a href="/popular"><span class="most-viewed-icon"><i class="fas fa-bolt"></i></span> Ən çox izlənilənlər</a>
                 </h2>
             </div>
         </div>
@@ -44,8 +44,8 @@
                 <!-- end of Add-->
                 <div class="col-md-12">
                     <div class="most-viewed-header border-bottom mt-4">
-                        <h2><span class="most-viewed-icon"><i class="fas fa-thumbs-up"></i> </span>
-                            Redaktorun seçimi</h2>
+                        <h2><a href="/featured"><span class="most-viewed-icon"><i class="fas fa-thumbs-up"></i> </span>
+                        Redaktorun seçimi</a></h2>
                     </div>
                 </div>
 
