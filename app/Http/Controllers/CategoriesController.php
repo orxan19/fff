@@ -26,9 +26,9 @@ class CategoriesController extends Controller
     }
 
 
-    public function show($id)
+    public function show($slug)
     {
-        $category = Category::findOrFail($id);
+        $category = Category::where('slug', '=', $slug)->firstOrFail();
         $posts = $category->posts()->orderBy('created_at', 'desc')->paginate(9);
 
         return view('category', compact('category','posts'));

@@ -17,16 +17,16 @@ window.Plyr = require('plyr');
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
 
-/*const app = new Vue({
-    el: '#app'
-});*/
 const player = new Plyr('#playerr', {
-    debug: true,
+    debug: false,
     title: 'View From A Blue Moon',
+
     keyboard: {
         global: true
     },
     tooltips: {
-        controls: true
+        controls: false
     }
 });
+
+

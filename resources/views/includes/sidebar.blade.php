@@ -11,7 +11,7 @@
             <div class="container">
                 @foreach($most_viewed_posts as $post)
                 <div class="col-md-12 most-viewed-post">
-                    <a href="/videos/{{ $post->id }}">
+                    <a href="/videos/{{ $post->slug }}">
                         <div class="card">
                             <img class="card-img-top" src="/images/{{ $post->image }}" alt="">
                             <div class="card-body">
@@ -51,7 +51,7 @@
 
                     @foreach($is_featured as $post)
                 <div class="col-md-12 most-viewed-post mt-4">
-                    <a href="/videos/{{$post->id}}">
+                    <a href="/videos/{{ $post->slug }}">
                         <div class="card">
                             <img class="card-img-top" src="/images/{{$post->image}}" alt="">
                             <div class="card-body">

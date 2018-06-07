@@ -40,15 +40,37 @@ class PostsController extends Controller
     }
 
 
-    public function show($id)
+    /**
+     * @param $id
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function show($slug)
     {
-        $post = Post::with('category')->findOrFail($id);
+
+        $post = Post::where('slug','=', $slug)->firstOrFail();
+
+        $post = Post::with('category')->findOrFail($post->id);
+
+
 
         $category_posts = Category::find($post->category->id)->posts()->orderBy('created_at', 'desc')->take(3)->get();
-        $post->increment('views');
-        $is_featured = Post::where('is_featured', 1)->orderBy('created_at', 'desc')->take(3)->get();
 
-       return view('post', compact('post', 'category_posts'));
+        $post->increment('views');
+
+        $next_post = null;
+        $prev_post = null;
+
+        if(Post::where('id', '=', $post->id + 1)->exists()){
+            $next_post = Post::find($post->id + 1);
+        }
+
+        if(Post::where('id', '=', $post->id - 1)->exists()){
+            $prev_post = Post::find($post->id - 1);
+        }
+
+
+
+       return view('post', compact('post', 'category_posts', 'next_post', 'prev_post'));
 
 
     }
@@ -87,6 +109,12 @@ class PostsController extends Controller
     }
 
     public function query(Request $request){
+
+        $query = $request->validate([
+            'query' => 'required|max:255',
+        ]);
+
+
        $query = $request->get('query');
 
         $posts = Post::where('title', 'like', '%'.$query.'%')->orWhere('description', 'like', '%'.$query.'%')->orderBy('created_at', 'desc')->take(20)->get();

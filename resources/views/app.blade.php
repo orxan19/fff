@@ -11,7 +11,9 @@
           integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="/css/style.css">
+
     <link rel="stylesheet" href="https://cdn.plyr.io/3.3.10/plyr.css">
+{{-- ADD TO PROJECT --}}
     <title>Document</title>
 </head>
 <body>
@@ -21,6 +23,10 @@
 
 @include('includes.navbar')
 
+<div class="container">
+    @include('includes.errorMessage')
+</div>
+
 
 @yield('content')
 
@@ -29,8 +35,8 @@
 
 @include('includes.footer')
 
-
 <script src="/js/app.js"></script>
+
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script>$('.responsive').slick({
         dots: false,

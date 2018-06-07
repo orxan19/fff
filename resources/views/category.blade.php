@@ -13,7 +13,7 @@
                     <div class="row border-bottom ">
 
                         <div class="category-name mx-auto">
-                            <h3 class="pl-4"><a href="/category/{{$category->id}}"><span class="category-icon"><i class="{{$category->icon}}"></i></span> {{ucfirst($category->title)}}</a>
+                            <h3 class="pl-4"><span class="category-icon"><i class="{{$category->icon}}"></i></span> {{ucfirst($category->title)}}
                             </h3>
                         </div>
 
@@ -24,7 +24,7 @@
 
                         @foreach($posts as $post)
                         <div class="col-md-12 col-lg-4 mt-2">
-                            <a href="/videos/{{ $post->id }}">
+                            <a href="/videos/{{ $post->slug }}">
                                 <div class="card">
                                     <img class="card-img-top" src="/images/{{ $post->image }}" alt="{{$post->description}}">
                                     <div class="card-body">

@@ -24,22 +24,25 @@ $factory->define(App\User::class, function (Faker $faker) {
 
 $factory->define(App\Post::class, function (Faker $faker) {
 
-    return [
-        'title' => $faker->sentence,
-        'description' => $faker->sentence,
-        'source' => 'videos/video.mp4',
-        'image' => 'image.jpg',
-        'views'	=>	$faker->numberBetween(0, 5000),
-        'category_id'	=>	$faker->numberBetween(1, 9),
-        'user_id'	=>	$faker->numberBetween(1, 3),
-        'is_featured'	=>	$faker->numberBetween(0, 1)
-    ];
+            return [
+                'title' => $faker->sentence,
+                'description' => $faker->sentence,
+                'slug' => $faker->slug,
+                'source' => 'videos/video.mp4',
+                'image' => 'image.jpg',
+                'views'	=>	$faker->numberBetween(0, 5000),
+                'category_id'	=>	$faker->numberBetween(1, 14),
+                'user_id'	=>	$faker->numberBetween(1, 3),
+                'is_featured'	=>	$faker->numberBetween(0, 1)
+            ];
+
 });
 
 $factory->define(App\Category::class, function (Faker $faker) {
 
     return [
         'title' => $faker->word,
+        'slug' => $faker->slug,
         'color' => $faker->randomElement(['000000', '111111', 'eeeeee' , 'dddddd', 'bbb' , 'aaa' , '222222']),
         'icon' => $faker->randomElement(['fa fa-users', 'fab fa-fort-awesome', 'fas fa-chart-line' , 'fas fa-music', 'fas fa-align-center' , 'fas fa-school' , 'fas fa-globe'])
     ];

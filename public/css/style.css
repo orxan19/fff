@@ -568,6 +568,11 @@ nav button.confirm {
   color: #005cbf;
 }
 
+*:focus {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
 @media (min-width: 1360px) {
   .container {
     max-width: 1200px;

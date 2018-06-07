@@ -11,17 +11,14 @@
                     <div class="player-header">{{$post->title}}
                     </div>
 
-                    <video crossorigin="" playsinline="" poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg" id="playerr" src="/videos/video.mp4">
+                    <video id="playerr" controls crossorigin="" playsinline="" poster="/images/{{ $post->image }}" src="/videos/video.mp4">
                         <!-- Video files -->
-                        <source src="/videos/video.mp4" type="video/mp4" size="576">
-                        <source src="/videos/videoplayback.mp4" type="video/mp4" size="360" >
-
+                        <source src="/{{ $post->source }}" type="video/mp4" size="576">
                         <!-- Caption files -->
-                        <track kind="captions" label="English" srclang="en" src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt" default="">
-                        <track kind="captions" label="Français" srclang="fr" src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.fr.vtt">
 
-                        <!-- Fallback for browsers that don't support the <video> element -->
-                        <a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" download="">Download</a>
+                        <track kind="captions" label="Français" srclang="fr" src="">
+
+
                     </video>
 
                     <div class="container">
@@ -45,6 +42,17 @@
 
                             <div class="row mt-4">
                                 <h3 class="post-name">{{ $post->description }}</h3>
+                            </div>
+
+                            <div class="row d-flex mt-4 mb-4">
+                                @if($prev_post)
+                                <a href="/videos/{{ $prev_post->slug }}" class="btn btn-primary"><i class="fas fa-arrow-left"></i> Evvelki xeber</a>
+                                @endif
+
+                                @if($next_post)
+                                <a href="/videos/{{ $next_post->slug }}" class="btn btn-primary ml-auto">Sonraki xeber <i class="fas fa-arrow-right"></i></a>
+
+                                    @endif
                             </div>
                         </div>
                     </div>

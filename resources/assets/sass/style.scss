@@ -582,6 +582,10 @@ nav{
   }
 }
 
+*:focus{
+  box-shadow: none !important;
+}
+
 @media (min-width: 1360px) {
   .container {
     max-width: 1200px;

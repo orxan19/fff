@@ -13894,17 +13894,15 @@ window.Plyr = __webpack_require__(39);
 
 Vue.component('example-component', __webpack_require__(40));
 
-/*const app = new Vue({
-    el: '#app'
-});*/
 var player = new Plyr('#playerr', {
-    debug: true,
+    debug: false,
     title: 'View From A Blue Moon',
+
     keyboard: {
         global: true
     },
     tooltips: {
-        controls: true
+        controls: false
     }
 });
 
