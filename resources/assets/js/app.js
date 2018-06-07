@@ -18,7 +18,7 @@ window.Plyr = require('plyr');
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
 const controls = `
 	<div class="button" >
-		<img src="/images/logo.png" style="width: 124px;margin-top: -5px;" />
+		<a href="https://metbuat.az" target="_blank"><img src="/images/logo.png" style="width: 124px;margin-top: -5px;" /></a>
 	</div>
 	<div class="plyr__controls">
     <button type="button" class="plyr__control" data-plyr="restart">

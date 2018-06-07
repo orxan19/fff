@@ -23,7 +23,7 @@
 
                     <div class="container">
                         <div class="player-info">
-                            <div class="row"><h5  class="category-name pl-1" style="border-left: 5px solid #{{$post->category->color}};">{{ $post->category->title }}</h5>
+                            <div class="row"><h5  class="category-name pl-1" style="border-left: 5px solid #{{$post->category->color}};">{{ ucfirst($post->category->title)}}</h5>
 
                                 <div class="ml-auto">
                                     <div class="row">
