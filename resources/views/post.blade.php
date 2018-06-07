@@ -98,7 +98,7 @@
                     </div>
 
                     <div class="row">
-                        <img src="images/adr.png" class="img-fluid" alt="">
+                        <img src="/images/adr.png" class="img-fluid" alt="">
                     </div>
 
                 </div>

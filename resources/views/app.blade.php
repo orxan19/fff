@@ -15,6 +15,36 @@
     <link rel="stylesheet" href="https://cdn.plyr.io/3.3.10/plyr.css">
 {{-- ADD TO PROJECT --}}
     <title>Document</title>
+    <style>
+        .plyr {
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+        .title {
+            position:absolute;
+            top:0;
+            left:0;
+            color:#fff;
+            padding:20px;
+        }
+        .button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 11px;
+            color: #fff;
+            background: #fff;
+            padding: 10px;
+        }
+        .plyr--hide-controls .title {
+            opacity: 0;
+            pointer-events: none;
+        }
+        .plyr--hide-controls .button {
+            opacity: 0;
+            pointer-events: none;
+        }
+    </style>
 </head>
 <body>
 

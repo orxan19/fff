@@ -13893,18 +13893,8 @@ window.Plyr = __webpack_require__(39);
  */
 
 Vue.component('example-component', __webpack_require__(40));
-
-var player = new Plyr('#playerr', {
-    debug: false,
-    title: 'View From A Blue Moon',
-
-    keyboard: {
-        global: true
-    },
-    tooltips: {
-        controls: false
-    }
-});
+var controls = '\n\t<div class="button" >\n\t\t<img src="/images/logo.png" style="width: 124px;margin-top: -5px;" />\n\t</div>\n\t<div class="plyr__controls">\n    <button type="button" class="plyr__control" data-plyr="restart">\n        <svg role="presentation"><use xlink:href="#plyr-restart"></use></svg>\n        <span class="plyr__tooltip" role="tooltip">Restart</span>\n    </button>\n    <button type="button" class="plyr__control" data-plyr="rewind">\n        <svg role="presentation"><use xlink:href="#plyr-rewind"></use></svg>\n        <span class="plyr__tooltip" role="tooltip">Rewind {seektime} secs</span>\n    </button>\n    <button type="button" class="plyr__control" aria-pressed="false" aria-label="Play, {title}" data-plyr="play">\n        <svg class="icon--pressed" role="presentation"><use xlink:href="#plyr-pause"></use></svg>\n        <svg class="icon--not-pressed" role="presentation"><use xlink:href="#plyr-play"></use></svg>\n        <span class="label--pressed plyr__tooltip" role="tooltip">Pause</span>\n        <span class="label--not-pressed plyr__tooltip" role="tooltip">Play</span>\n    </button>\n    <button type="button" class="plyr__control" data-plyr="fast-forward">\n        <svg role="presentation"><use xlink:href="#plyr-fast-forward"></use></svg>\n        <span class="plyr__tooltip" role="tooltip">Forward {seektime} secs</span>\n    </button>\n    <div class="plyr__progress">\n        <input data-plyr="seek" type="range" min="0" max="100" step="0.01" value="0" aria-label="Seek">\n        <progress class="plyr__progress__buffer" min="0" max="100" value="0">% buffered</progress>\n        <span role="tooltip" class="plyr__tooltip">00:00</span>\n    </div>\n    <div class="plyr__time plyr__time--current" aria-label="Current time">00:00</div>\n    <div class="plyr__time plyr__time--duration" aria-label="Duration">00:00</div>\n    <button type="button" class="plyr__control" aria-pressed="false" aria-label="Mute" data-plyr="mute">\n        <svg class="icon--pressed" role="presentation"><use xlink:href="#plyr-muted"></use></svg>\n        <svg class="icon--not-pressed" role="presentation"><use xlink:href="#plyr-volume"></use></svg>\n        <span class="label--pressed plyr__tooltip" role="tooltip">Unmute</span>\n        <span class="label--not-pressed plyr__tooltip" role="tooltip">Mute</span>\n    </button>\n    <div class="plyr__volume">\n        <input data-plyr="volume" type="range" min="0" max="1" step="0.05" value="1" autocomplete="off" aria-label="Volume">\n    </div>\n    <button type="button" class="plyr__control" aria-pressed="true" aria-label="Enable captions" data-plyr="captions">\n        <svg class="icon--pressed" role="presentation"><use xlink:href="#plyr-captions-on"></use></svg>\n        <svg class="icon--not-pressed" role="presentation"><use xlink:href="#plyr-captions-off"></use></svg>\n        <span class="label--pressed plyr__tooltip" role="tooltip">Disable captions</span>\n        <span class="label--not-pressed plyr__tooltip" role="tooltip">Enable captions</span>\n    </button>\n    <button type="button" class="plyr__control" aria-pressed="false" aria-label="Enter fullscreen" data-plyr="fullscreen">\n        <svg class="icon--pressed" role="presentation"><use xlink:href="#plyr-exit-fullscreen"></use></svg>\n        <svg class="icon--not-pressed" role="presentation"><use xlink:href="#plyr-enter-fullscreen"></use></svg>\n        <span class="label--pressed plyr__tooltip" role="tooltip">Exit fullscreen</span>\n        <span class="label--not-pressed plyr__tooltip" role="tooltip">Enter fullscreen</span>\n    </button>\n</div>\n';
+var player = new Plyr('#playerr', { controls: controls });
 
 /***/ }),
 /* 13 */
