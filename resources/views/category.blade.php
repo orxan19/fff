@@ -13,7 +13,7 @@
                     <div class="row border-bottom ">
 
                         <div class="category-name mx-auto">
-                            <h3 class="pl-4"><span class="category-icon"><i class="{{$category->icon}}"></i></span> {{ucfirst($category->title)}}
+                            <h3 class="pl-4"><span class="category-icon"><i class="{{$category->icon}}"></i></span> {{ucfirst($category->name)}}
                             </h3>
                         </div>
 

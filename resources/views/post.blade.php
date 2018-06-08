@@ -23,7 +23,7 @@
 
                     <div class="container">
                         <div class="player-info">
-                            <div class="row"><h5  class="category-name pl-1" style="border-left: 5px solid #{{$post->category->color}};">{{ ucfirst($post->category->title)}}</h5>
+                            <div class="row"><h5  class="category-name pl-1" style="border-left: 5px solid #{{$post->category->color}};">{{ ucfirst($post->category->name)}}</h5>
 
                                 <div class="ml-auto">
                                     <div class="row">
@@ -61,7 +61,7 @@
                         <div class="row border-bottom">
 
                             <div class="category-name" >
-                                <h3><a href="/category/{{ $post->category->id }}"><span class="category-icon"><i class="{{ $post->category->icon }}"></i></span> {{ ucfirst($post->category->title) }}</a>
+                                <h3><a href="/category/{{ $post->category->id }}"><span class="category-icon"><i class="{{ $post->category->icon }}"></i></span> {{ ucfirst($post->category->name) }}</a>
                                 </h3>
                             </div>
 

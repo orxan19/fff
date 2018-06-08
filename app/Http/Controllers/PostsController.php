@@ -13,18 +13,14 @@ class PostsController extends Controller
     {
         $latest_posts = Post::with('category')->orderBy('created_at', 'desc')->take(6)->get();
 
-//        $categories = Category::with('posts')->orderBy('created_at', 'desc')->get();
-//        $categories->setRelation('posts', $categories->posts->take(5));
-//        dd($categories);
-
         $categories = Category::orderBy('id', 'desc')->get();
 
         foreach ($categories as $category)
         {
-            $posts[$category->title] = $category->posts()->take(3)->orderBy('created_at', 'desc')->get();
+            $posts[$category->name] = $category->posts()->take(3)->orderBy('created_at', 'desc')->get();
 
         }
-        return view('home', compact('latest_posts', 'categories', 'posts'));
+        return view('index', compact('latest_posts', 'categories', 'posts'));
 
     }
 
@@ -111,8 +107,9 @@ class PostsController extends Controller
     public function query(Request $request){
 
         $query = $request->validate([
-            'search' => 'required|max:255|min:2',
+            'query' => 'required|max:255',
         ]);
+
         $query = $request->get('query');
 
         $posts = Post::where('title', 'like', '%'.$query.'%')->orWhere('description', 'like', '%'.$query.'%')->orderBy('created_at', 'desc')->take(20)->get();

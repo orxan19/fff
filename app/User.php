@@ -19,4 +19,10 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public function isSuperAdmin(){
+      if($this->is_admin==1){
+          return true;
+      };
+      return false;
+    }
 }
