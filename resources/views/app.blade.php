@@ -7,13 +7,10 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/css/app.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
-          integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/css/slick.css">
     <link rel="stylesheet" href="/css/style.css">
-
-    <link rel="stylesheet" href="https://cdn.plyr.io/3.3.10/plyr.css">
-{{-- ADD TO PROJECT --}}
+    <link rel="stylesheet" href="/css/plyr.css">
     <title>Document</title>
     <style>
         .plyr {
@@ -28,13 +25,12 @@
             padding:20px;
         }
         .button {
-            position: absolute;
-            top: 0;
-            right: 0;
-            margin: 11px;
-            color: #fff;
-            background: #fff;
-            padding: 10px;
+            position:absolute;
+            top:0;
+            right:0;
+            color:#fff;
+            background:#fff;
+            padding:20px;
         }
         .plyr--hide-controls .title {
             opacity: 0;
@@ -66,41 +62,7 @@
 @include('includes.footer')
 
 <script src="/js/app.js"></script>
-
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script>$('.responsive').slick({
-        dots: false,
-        infinite: true,
-        prevArrow: "<button type='button' class='slick-prev pull-left'><i class='fas fa-angle-double-left' aria-hidden='true'></i></button>",
-        nextArrow: "<button type='button' class='slick-next pull-right'><i class='fas fa-angle-double-right' aria-hidden='true'></i></button>",
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 2,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    infinite: true,
-                }
-            },
-            {
-                breakpoint: 767,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    });</script>
+<script src="/js/slick.min.js"></script>
 <script src="/js/common.js"></script>
 </body>
 </html>

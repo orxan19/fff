@@ -111,11 +111,9 @@ class PostsController extends Controller
     public function query(Request $request){
 
         $query = $request->validate([
-            'query' => 'required|max:255',
+            'search' => 'required|max:255|min:2',
         ]);
-
-
-       $query = $request->get('query');
+        $query = $request->get('query');
 
         $posts = Post::where('title', 'like', '%'.$query.'%')->orWhere('description', 'like', '%'.$query.'%')->orderBy('created_at', 'desc')->take(20)->get();
 

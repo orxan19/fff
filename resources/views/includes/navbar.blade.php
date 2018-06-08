@@ -52,7 +52,7 @@
                 <ul class="navbar-nav flex-row navbar-social">
                     <li class="nav-item mx-auto mx-lg-auto">
                             <form class="d-flex" action="/query">
-                                <input class="form-control" required name="query" type="search" placeholder="Axtar" aria-label="Search">
+                                <input class="form-control"  name="search" type="search" placeholder="Axtar" aria-label="Search">
                                 <button class="btn btn-outline-success ml-2 fa fa-search" type="submit"></button>
                             </form>
                     </li>
