@@ -13,8 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    You are logged in!
+                    Admin panel <a class="btn btn-primary btn-sm" href="/moderatorpanel">Admin</a>
                 </div>
             </div>
         </div>

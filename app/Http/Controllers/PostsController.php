@@ -17,7 +17,7 @@ class PostsController extends Controller
 
         foreach ($categories as $category)
         {
-            $posts[$category->name] = $category->posts()->take(3)->orderBy('created_at', 'desc')->get();
+            $posts[$category->name] = $category->posts()->take(6)->orderBy('created_at', 'desc')->get();
 
         }
         return view('index', compact('latest_posts', 'categories', 'posts'));

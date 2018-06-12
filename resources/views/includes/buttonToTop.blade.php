@@ -1,1 +1,1 @@
-<button class="btn btn-primary" id="myBtn" >Top</button>
+<button class="btn toTop" id="myBtn" >Top</button>

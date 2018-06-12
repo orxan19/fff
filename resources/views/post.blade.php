@@ -11,19 +11,14 @@
                     <div class="player-header">{{$post->title}}
                     </div>
 
-                    <video id="playerr" controls crossorigin="" playsinline="" poster="/images/{{ $post->image }}" src="/videos/video.mp4">
+                    <video id="playerr" controls crossorigin="" playsinline="" poster="/{{ $post->image }}" src="/{{$post->source}}">
                         <!-- Video files -->
                         <source src="/{{ $post->source }}" type="video/mp4" size="576">
-                        <!-- Caption files -->
-
-                        <track kind="captions" label="Français" srclang="fr" src="">
-
-
                     </video>
 
                     <div class="container">
                         <div class="player-info">
-                            <div class="row"><h5  class="category-name pl-1" style="border-left: 5px solid #{{$post->category->color}};">{{ ucfirst($post->category->name)}}</h5>
+                            <div class="row"><h5  class="category-name pl-1" style="border-left: 5px solid {{ $post->category->color}};">{{ ucfirst($post->category->name)}}</h5>
 
                                 <div class="ml-auto">
                                     <div class="row">
@@ -41,7 +36,7 @@
                             </div>
 
                             <div class="row mt-4">
-                                <h3 class="post-name">{{ $post->description }}</h3>
+                                <h3 class="post-name">{!! $post->description !!}</h3>
                             </div>
 
                             <div class="row d-flex mt-4 mb-4">
@@ -51,7 +46,6 @@
 
                                 @if($next_post)
                                 <a href="/videos/{{ $next_post->slug }}" class="btn btn-primary ml-auto">Sonraki xeber <i class="fas fa-arrow-right"></i></a>
-
                                     @endif
                             </div>
                         </div>
@@ -61,11 +55,11 @@
                         <div class="row border-bottom">
 
                             <div class="category-name" >
-                                <h3><a href="/category/{{ $post->category->id }}"><span class="category-icon"><i class="{{ $post->category->icon }}"></i></span> {{ ucfirst($post->category->name) }}</a>
+                                <h3><a href="/{{ $post->category->slug }}"><span class="category-icon"><i class="{{ $post->category->icon }}"></i></span> {{ ucfirst($post->category->name) }}</a>
                                 </h3>
                             </div>
 
-                            <div class="category-more ml-auto"><a href="/category/{{ $post->category->id }}">Bütün videolara bax <span
+                            <div class="category-more ml-auto"><a href="/{{ $post->category->slug }}">Bütün videolara bax <span
                                             class="category-more-icon"><i class="fa fa-angle-double-right"></i></span></a></div>
 
                         </div>
@@ -73,9 +67,9 @@
                         <div class="row videos">
                     @foreach($category_posts as $post)
                             <div class="col-md-4">
-                                <a href="/videos/{{ $post->id }}">
+                                <a href="/videos/{{ $post->slug }}">
                                     <div class="card">
-                                        <img class="card-img-top" src="/images/{{ $post->image }}" alt="">
+                                        <img class="card-img-top" src="/{{ $post->image }}" alt="">
                                         <div class="card-body">
                                             <div class="row">
                                                 <div><i class="fa fa-eye"></i> &nbsp;<span

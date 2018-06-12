@@ -30,7 +30,7 @@ return [
     |--------------------------------------------------------------------------
     */
 
-    'url_prefix' => 'admin',
+    'url_prefix' => 'moderatorpanel',
 
     /*
      * Subdomain & Domain support routes

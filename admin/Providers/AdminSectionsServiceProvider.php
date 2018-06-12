@@ -26,6 +26,7 @@ class AdminSectionsServiceProvider extends ServiceProvider {
     protected $sections = [
         'App\User'=>'Admin\Http\Sections\Users',
         'App\Post'=>'Admin\Http\Sections\Posts',
+        'App\Category'=>'Admin\Http\Sections\Categories',
 
     ];
 

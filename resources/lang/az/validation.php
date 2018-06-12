@@ -89,7 +89,7 @@ return [
   */
 
   'custom' => [
-    'search' => [
+    'query' => [
       'required' => 'Axtarış xanası boş ola bilməz',
     ],
   ],

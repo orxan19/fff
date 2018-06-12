@@ -66,7 +66,7 @@ class Users extends Section implements Initializable
     {
         return AdminForm::panel()->addBody([
             AdminFormElement::text('name', 'Username')->required(),
-            AdminFormElement::password('password', 'Password')->required()->addValidationRule('min:6'),
+            AdminFormElement::password('password', 'Password')->required()->addValidationRule('min:6')->hashWithBcrypt(),
             AdminFormElement::text('email', 'E-mail')->required()->addValidationRule('email'),
 
 

@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/plyr.css">
     <title>Document</title>
+
     <style>
         .plyr {
             border-radius: 4px;
@@ -41,8 +42,11 @@
             pointer-events: none;
         }
     </style>
+    {{-- Add to project--}}
 </head>
 <body>
+
+<div class="overlay"></div>
 
 @include('includes.buttonToTop')
 
@@ -64,5 +68,11 @@
 <script src="/js/app.js"></script>
 <script src="/js/slick.min.js"></script>
 <script src="/js/common.js"></script>
+<script>
+    $( document ).ready(function() {
+
+    });
+
+</script>
 </body>
 </html>

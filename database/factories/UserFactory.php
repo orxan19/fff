@@ -28,8 +28,8 @@ $factory->define(App\Post::class, function (Faker $faker) {
                 'title' => $faker->sentence,
                 'description' => $faker->sentence,
                 'slug' => $faker->slug,
-                'source' => 'videos/video.mp4',
-                'image' => 'image.jpg',
+                'source' => 'videos/c895ce66a3e0f3cb8137f9c220cee4aa.mp4',
+                'image' => 'images/image.jpg',
                 'views'	=>	$faker->numberBetween(0, 5000),
                 'category_id'	=>	$faker->numberBetween(1, 14),
                 'user_id'	=>	$faker->numberBetween(1, 3),
@@ -41,9 +41,9 @@ $factory->define(App\Post::class, function (Faker $faker) {
 $factory->define(App\Category::class, function (Faker $faker) {
 
     return [
-        'title' => $faker->word,
+        'name' => $faker->word,
         'slug' => $faker->slug,
-        'color' => $faker->randomElement(['000000', '111111', 'eeeeee' , 'dddddd', 'bbb' , 'aaa' , '222222']),
+        'color' => $faker->randomElement(['#000000', '#111111', '#eeeeee' , '#dddddd', '#bbb' , '#aaa' , 'red']),
         'icon' => $faker->randomElement(['fa fa-users', 'fab fa-fort-awesome', 'fas fa-chart-line' , 'fas fa-music', 'fas fa-align-center' , 'fas fa-school' , 'fas fa-globe'])
     ];
 });

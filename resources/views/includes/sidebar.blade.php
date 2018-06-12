@@ -1,4 +1,4 @@
-<div class="col-lg-4 col-md-4">
+<div class="col-lg-4 col-md-4 scrol">
     <div class="row">
         <div class="col-md-11">
             <div class="most-viewed-header border-bottom">
@@ -13,7 +13,7 @@
                 <div class="col-md-12 most-viewed-post">
                     <a href="/videos/{{ $post->slug }}">
                         <div class="card">
-                            <img class="card-img-top" src="/images/{{ $post->image }}" alt="">
+                            <img class="card-img-top" src="/{{ $post->image }}" alt="">
                             <div class="card-body">
                                 <div class="row">
                                     <div><i class="fa fa-eye"></i> &nbsp;<span
@@ -53,7 +53,7 @@
                 <div class="col-md-12 most-viewed-post mt-4">
                     <a href="/videos/{{ $post->slug }}">
                         <div class="card">
-                            <img class="card-img-top" src="/images/{{$post->image}}" alt="">
+                            <img class="card-img-top" src="/{{$post->image}}" alt="">
                             <div class="card-body">
                                 <div class="row">
                                     <div><i class="fa fa-eye"></i> &nbsp;<span
@@ -100,3 +100,4 @@
         </div> <!-- end of row-->
     </div>
 </div>
+

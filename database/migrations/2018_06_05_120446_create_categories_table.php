@@ -15,8 +15,8 @@ class CreateCategoriesTable extends Migration
     {
         Schema::create('categories', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('color')->default('000000');
-            $table->string('title');
+            $table->string('color')->default('#000000');
+            $table->string('name');
             $table->string('slug');
             $table->timestamps();
         });

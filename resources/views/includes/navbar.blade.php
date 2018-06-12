@@ -1,6 +1,13 @@
 <div class="container">
-    <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="/"><img src="/images/logo.png" class="logo" alt=""></a>
+    <div class="row px-2">
+        <form class="searchForm" action="/query">
+            <input type="search" class="searchInput" name="query" autocomplete="off" placeholder="Hansi xeberi axtarmaq isterdiniz?" />
+            <button  class="closeForm"><i class="fas fa-times"></i></button>
+        </form>
+
+    </div>
+    <nav class="navbar navbar-expand-lg ml-auto">
+        <a class="navbar-brand" href="/"><img src="/images/metbuat-tv-logo.png" class="logo" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
                 aria-controls="navbarsExample05">
             <i class="fas fa-bars"></i>
@@ -9,52 +16,68 @@
         <div class="collapse navbar-collapse" id="navbar">
             <ul class="navbar-nav mr-auto">
 
+
                 @foreach($categories as $category)
                     @if($loop->iteration == 8)
                         @break
-                   @endif
+                    @endif
                     <li class="nav-item">
-                        <a class="nav-link" href="/category/{{ $category->slug }}">{{ucfirst($category->name)}}</a>
+                        <a class="nav-link" href="/{{ $category->slug }}">{{ucfirst($category->name)}}</a>
                     </li>
 
-                    @endforeach
+                @endforeach
 
                 @if(count($categories) > 7)
                 <!-- Example single danger button -->
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Diger Kategoriyalar
+                    <div class="nav-item btn-group" style="display: block">
+                        <button type="button" class="btn btn-dropdown" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-bars mr-1"></i> Diger
                         </button>
                         <div class="dropdown-menu">
 
-                @endif
+                            {{--<style>--}}
+                                {{--.dropdown-toggle {--}}
+                                    {{--padding: 10px 20px;--}}
+                                    {{--background: #eee !important;--}}
+                                {{--}--}}
+
+                                {{--.dropdown-menu {--}}
+
+                                {{--}--}}
+
+                                {{--.dropdown-menu > li > a {--}}
+
+                                {{--}--}}
+                            {{--</style>--}}
+                            @endif
 
 
 
 
-                @foreach($categories as $category)
-                    @if($loop->iteration < 8)
-                        @continue
-                        @endif
-                        <li class="nav-item dropdown-item">
-                            <a class="nav-link" href="/category/{{ $category->slug }}">{{ucfirst($category->name)}}</a>
-                        </li>
+                            @foreach($categories as $category)
+                                @if($loop->iteration < 8)
+                                    @continue
+                                @endif
+                                <li class="nav-item dropdown-item">
+                                    <a class="nav-link"
+                                       href="/{{ $category->slug }}">{{ucfirst($category->name)}}</a>
+                                </li>
 
-                    @endforeach
+                            @endforeach
                             @if(count($categories) > 9)
 
                         </div>
                     </div>
-                    @endif
+                @endif
             </ul>
 
             <div class="ml-auto">
                 <ul class="navbar-nav flex-row navbar-social">
                     <li class="nav-item mx-auto mx-lg-auto">
-                            <form class="d-flex" action="/query">
-                                <input class="form-control"  name="query" type="search" placeholder="Axtar" aria-label="Search">
-                                <button class="btn btn-outline-success ml-2 fa fa-search" type="submit"></button>
-                            </form>
+                        <div class="top">
+                            <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+                        </div>
                     </li>
 
 
@@ -69,5 +92,76 @@
 
         </div>
     </nav>
+    <style>
+        .searchForm{
+            width: 100%;
+            display:none;
+            transition: background-color 0.2s ease-in;
+            background:#1e1e1e;
+            padding:20px 42px;
+            text-align:center;
+            position:relative;
+            z-index: 1040;
+            margin-bottom: 20px;
+        }
 
+        .searchInput{
+            border:none;
+            padding:10px 0;
+            background:none;
+            color:white;
+            outline:none;
+            border-bottom:1px solid white;
+            width:80%;
+            font-size:26px;
+            font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+            font-weight: 300;
+        }
+
+        .searchButton{
+            background:none;
+            border:none;
+        }
+
+        .closeForm {
+            background: transparent;
+            color: #ffffff;
+            border: none;
+            font-size: 30px;
+
+
+        }
+
+        .closeForm:focus{
+            outline: none;
+        }
+
+        .searchButton{
+            font-size:36px;
+            color:white;
+        }
+
+        .searchInput::-webkit-input-placeholder {
+            color: rgba(255,255,255,0.6);
+            font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+            font-weight: 300;
+        }
+
+        .btn-search{
+            text-decoration:none;
+            background-color:transparent;
+            color:white;
+            cursor: pointer;
+            font-size: 24px ;
+            border-radius:0 0 2px 2px;
+            -webkit-transition: background-color 250ms ease-out, ;
+            -moz-transition: background-color 250ms ease-out;
+            -o-transition: background-color 250ms ease-out;
+            transition: background-color 250ms ease-out;
+        }
+
+        .btn-search:hover{
+
+        }
+    </style>
 </div>

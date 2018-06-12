@@ -3,11 +3,11 @@ $( document ).ready(function() {
 $('.responsive').slick({
         dots: false,
         infinite: true,
-        prevArrow: "<button type='button' class='slick-prev pull-left'><i class='fas fa-angle-double-left' aria-hidden='true'></i></button>",
-        nextArrow: "<button type='button' class='slick-next pull-right'><i class='fas fa-angle-double-right' aria-hidden='true'></i></button>",
+        prevArrow: "<button type='button' class='slick-prev pull-left'><i class='fas fa-angle-left' aria-hidden='true'></i></button>",
+        nextArrow: "<button type='button' class='slick-next pull-right'><i class='fas fa-angle-right' aria-hidden='true'></i></button>",
         speed: 500,
         slidesToShow: 3,
-        slidesToScroll: 2,
+        slidesToScroll: 1,
         responsive: [
             {
                 breakpoint: 1024,
@@ -21,6 +21,14 @@ $('.responsive').slick({
                 breakpoint: 767,
                 settings: {
                     slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+
+            {
+                breakpoint: 568,
+                settings: {
+                    slidesToShow: 1,
                     slidesToScroll: 1
                 }
             },
@@ -49,6 +57,42 @@ $('.responsive').slick({
         $("html, body").animate({ scrollTop: 0 }, "slow");
         return false;
     });
+
+    $(".btn-search").click(function(){
+        $("form").slideToggle("400");
+        $("nav").slideToggle("400");
+        $('.overlay').css('display', 'block');
+    });
+
+    $('.closeForm').click(function(){
+        $("form").slideToggle("400");
+        $("nav").slideToggle("400");
+        $('.overlay').css('display', 'none');
+    });
+
+    $('.overlay').click(function(){
+        $("form").slideToggle("400");
+        $("nav").slideToggle("400");
+        $('.overlay').css('display', 'none');
+    });
+
+    $('form').mouseenter(
+        function () {
+            $(this).css({"background-color":"#302f2f"});
+        }
+    );
+
+    $('form').mouseout(
+        function () {
+            $(this).css({"background-color":"#1e1e1e"});
+        }
+    );
+
+    $('form').submit(function( event ) {
+        if($('.searchInput').val() == ''){
+            event.preventDefault();
+        }
+    })
 
 
 

@@ -26,7 +26,7 @@
                         <div class="col-md-12 col-lg-4 mt-2">
                             <a href="/videos/{{ $post->slug }}">
                                 <div class="card">
-                                    <img class="card-img-top" src="/images/{{ $post->image }}" alt="{{$post->description}}">
+                                    <img class="card-img-top" src="/{{ $post->image }}" alt="{{$post->description}}">
                                     <div class="card-body">
                                         <div class="row">
                                             <div><i class="fa fa-eye"></i> &nbsp;<span
