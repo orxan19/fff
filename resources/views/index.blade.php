@@ -55,6 +55,9 @@
 
                 @foreach($categories as $category)
 
+                 @if($loop->iteration == 6)
+                     @break
+                     @endif
                 <div class="post-all">
                     <div class="row border-bottom" >
 
@@ -73,10 +76,10 @@
                     @foreach($posts[$category->name] as $post)
                         <div class="col-md-12 col-lg-4 mt-3">
                             <a href="/videos/{{ $post->slug }}">
-                                <div class="card">
+                                <div class="card content-card">
 
                                     <div class="card-img-top" style="background-image: url('/{{ $post->image }}'); ">
-                            <div class="playButton"><i class="fab fa-youtube"></i></div>
+                            <div class="playButton"><i class="fas fa-play-circle"></i></div>
                                     </div>
                                     <div class="card-body">
                                         <div class="row">
@@ -89,7 +92,7 @@
                                         </div>
 
                                         <div class="row post-title">
-                                            <h2>{{ $post->title }}</h2>
+                                            <h2>{{ str_limit($post->title, 30) }}</h2>
                                         </div>
                                     </div>
                                 </div>
@@ -99,7 +102,7 @@
 
                     </div>
 
-                    <div class="row mt-4 mb-4">
+                    <div class="row mt-4">
                         <div class="category-more mx-auto border border-dark p-2 pr-3 pl-3 " style="border-radius: 30px;border-width: 2px !important;"><a href="/{{ $category->slug }}">Bütün videolara bax</a></div>
                     </div>
                 </div>

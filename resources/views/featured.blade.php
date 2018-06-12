@@ -12,7 +12,7 @@
 
                             <div class="category-name mx-auto">
                                 <h3><span class="most-viewed-icon category-icon"><i class="fas fa-thumbs-up"></i> </span>
-                                    Redaktorun seçimi
+                                    Tovsiyye olunanlar
                                 </h3>
                             </div>
 

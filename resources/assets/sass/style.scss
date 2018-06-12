@@ -14,6 +14,7 @@ body{
 
 }
 
+
 .btn-dropdown{
   background: transparent;
   font-size: 20px;
@@ -22,6 +23,10 @@ body{
   &:hover{
     color: #03b3c1;
   }
+}
+
+.mobile-dropdown-icon{
+  display: none;
 }
 
 .overlay {
@@ -175,32 +180,37 @@ nav{
 
 
 
-.card-img-top{
-  height: 200px;
-  background-position: center center;
-  background-size: cover;
-  position: relative;
 
-  .playButton {
-    //transform: translateY(120px);
-    position: absolute;
-    top:100%;
-    left: 40%;
-    background: transparent;
-    color: white;
-    font-size: 100px;
+.content-card {
+  .card-img-top {
+    height: 200px;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
     transition: all 0.4s ease-in-out;
-    opacity: 0;
 
-  }
-  &:hover{
-    .playButton{
-      opacity: 1;
-      top:40%;
-      //transform: translateY(0px);
+    .playButton {
+      //transform: translateY(120px);
+      position: absolute;
+      top: 100%;
+      left: 33%;
+      background: transparent;
+      color: white;
+      font-size: 80px;
+      transition: all 0.4s ease-in-out;
+      opacity: 0;
+
     }
-  }
+    &:hover {
+      opacity: 0.5;
+      .playButton {
+        opacity: 1;
+        top: 24%;
+        //transform: translateY(0px);
+      }
+    }
 
+  }
 }
 
 #main{
@@ -339,9 +349,10 @@ nav{
     background: transparent;
     transition: margin-right 0.3s ease;
     cursor: pointer;
+    margin-bottom: 30px;
 
     &:hover a{
-      color: #c82333;
+      color: #03b3c1;
     }
 
     &:hover{
@@ -387,7 +398,7 @@ nav{
     }
 
     .card:hover .post-title h2{
-      color: #c82333;
+      color: #03b3c1;
     }
 
     .card-body{
@@ -429,7 +440,7 @@ nav{
 
 
     &:hover{
-      color: #c82333;
+      color: #03b3c1;
     }
 
     h2{
@@ -440,7 +451,7 @@ nav{
     .most-viewed-icon{
       margin-left: 20px;
       margin-right: 20px;
-      color: #c82333;
+      color: #03b3c1;
     }
   }
 
@@ -458,7 +469,7 @@ nav{
     transition: color 0.3s ease-in-out;
 
     &:hover{
-      color: #c82333;
+      color: #03b3c1;
     }
   }
 
@@ -604,7 +615,7 @@ nav{
         transition: color 0.3s ease-in-out;
 
         &:hover{
-          color: #c82333;
+          color: #03b3c1;
           text-decoration: none;
         }
       }
@@ -677,9 +688,15 @@ nav{
   nav .navbar-nav .nav-link {
     font-size: 12px;
   }
+
+  .playButton{
+    left: 20%;
+  }
 }
 // Responsive
 @media (max-width: 1115px){
+
+
 
   #content{
     .social{
@@ -690,6 +707,15 @@ nav{
     }
   }
 
+
+  .playButton{
+
+    left: 20%;
+    i{
+      font-size: 60px;
+    }
+
+  }
 
   #content .most-viewed-header h2 {
     font-size: 16px;
@@ -709,6 +735,14 @@ nav{
 }
 
 @media (max-width: 991px){
+
+  .large-dropdown-icon{
+    display: none;
+  }
+
+  .mobile-dropdown-icon{
+    display: inline;
+  }
 
   #content{
     .social{
@@ -734,6 +768,19 @@ nav{
 
     i{
       font-size: 12px;
+    }
+
+    .playButton{
+      left: 40%;
+
+      i{
+        font-size: 80px;
+      }
+
+    }
+
+    .playButton{
+      font-size: 80px;
     }
     .post-view-count{
       font-size: 14px;
@@ -821,6 +868,13 @@ nav{
 
     i{
       font-size: 14px;
+    }
+
+    .playButton{
+      i{
+        font-size: 80px;
+      }
+
     }
     .post-view-count{
       font-size: 14px;

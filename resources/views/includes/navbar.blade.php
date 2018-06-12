@@ -32,7 +32,7 @@
                     <div class="nav-item btn-group" style="display: block">
                         <button type="button" class="btn btn-dropdown" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-bars mr-1"></i> Diger
+                            <i class="fas fa-bars mr-1 large-dropdown-icon"></i> <i class="fas fa-angle-down mr-1 mobile-dropdown-icon"></i> Diger
                         </button>
                         <div class="dropdown-menu">
 
@@ -59,10 +59,22 @@
                                 @if($loop->iteration < 8)
                                     @continue
                                 @endif
-                                <li class="nav-item dropdown-item">
-                                    <a class="nav-link"
-                                       href="/{{ $category->slug }}">{{ucfirst($category->name)}}</a>
-                                </li>
+
+                            @if(!$loop->last)
+                                        <li class="nav-item dropdown-item border-bottom">
+                                            <a class="nav-link"
+                                               href="/{{ $category->slug }}">{{ucfirst($category->name)}}</a>
+                                        </li>
+
+                                @else
+                                        <li class="nav-item dropdown-item">
+                                            <a class="nav-link"
+                                               href="/{{ $category->slug }}">{{ucfirst($category->name)}}</a>
+                                        </li>
+
+                                @endif
+
+
 
                             @endforeach
                             @if(count($categories) > 9)

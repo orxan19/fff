@@ -27,6 +27,10 @@ body {
   color: #03b3c1;
 }
 
+.mobile-dropdown-icon {
+  display: none;
+}
+
 .overlay {
   background: rgba(0, 0, 0, 0.6);
   position: fixed;
@@ -171,28 +175,34 @@ nav button.confirm {
   color: white;
 }
 
-.card-img-top {
+.content-card .card-img-top {
   height: 200px;
   background-position: center center;
   background-size: cover;
   position: relative;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
-.card-img-top .playButton {
+.content-card .card-img-top .playButton {
   position: absolute;
   top: 100%;
-  left: 40%;
+  left: 33%;
   background: transparent;
   color: white;
-  font-size: 100px;
+  font-size: 80px;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   opacity: 0;
 }
 
-.card-img-top:hover .playButton {
+.content-card .card-img-top:hover {
+  opacity: 0.5;
+}
+
+.content-card .card-img-top:hover .playButton {
   opacity: 1;
-  top: 40%;
+  top: 24%;
 }
 
 #main .row .col-md-4 {
@@ -312,11 +322,12 @@ nav button.confirm {
   -webkit-transition: margin-right 0.3s ease;
   transition: margin-right 0.3s ease;
   cursor: pointer;
+  margin-bottom: 30px;
 }
 
 #content .category-more:hover a,
 #player .category-more:hover a {
-  color: #c82333;
+  color: #03b3c1;
 }
 
 #content .category-more:hover,
@@ -370,7 +381,7 @@ nav button.confirm {
 
 #content .videos .card:hover .post-title h2,
 #player .videos .card:hover .post-title h2 {
-  color: #c82333;
+  color: #03b3c1;
 }
 
 #content .videos .card-body,
@@ -418,7 +429,7 @@ nav button.confirm {
 
 #content .most-viewed-header:hover,
 #player .most-viewed-header:hover {
-  color: #c82333;
+  color: #03b3c1;
 }
 
 #content .most-viewed-header h2,
@@ -431,7 +442,7 @@ nav button.confirm {
 #player .most-viewed-header .most-viewed-icon {
   margin-left: 20px;
   margin-right: 20px;
-  color: #c82333;
+  color: #03b3c1;
 }
 
 #content .post-view-count,
@@ -454,7 +465,7 @@ nav button.confirm {
 
 #content .post-title h2:hover,
 #player .post-title h2:hover {
-  color: #c82333;
+  color: #03b3c1;
 }
 
 #content .card-body,
@@ -587,7 +598,7 @@ nav button.confirm {
 }
 
 #footer .footer-list .footer-list-item a:hover {
-  color: #c82333;
+  color: #03b3c1;
   text-decoration: none;
 }
 
@@ -650,12 +661,24 @@ nav button.confirm {
   nav .navbar-nav .nav-link {
     font-size: 12px;
   }
+
+  .playButton {
+    left: 20%;
+  }
 }
 
 @media (max-width: 1115px) {
   #content .social .fab {
     padding: 20px;
     font-size: 20px;
+  }
+
+  .playButton {
+    left: 20%;
+  }
+
+  .playButton i {
+    font-size: 60px;
   }
 
   #content .most-viewed-header h2 {
@@ -673,6 +696,14 @@ nav button.confirm {
 }
 
 @media (max-width: 991px) {
+  .large-dropdown-icon {
+    display: none;
+  }
+
+  .mobile-dropdown-icon {
+    display: inline;
+  }
+
   #content .social .fab {
     padding: 16px;
     font-size: 16px;
@@ -689,6 +720,18 @@ nav button.confirm {
 
   #content .videos i {
     font-size: 12px;
+  }
+
+  #content .videos .playButton {
+    left: 40%;
+  }
+
+  #content .videos .playButton i {
+    font-size: 80px;
+  }
+
+  #content .videos .playButton {
+    font-size: 80px;
   }
 
   #content .videos .post-view-count {
@@ -761,6 +804,10 @@ nav button.confirm {
 
   #content .videos i {
     font-size: 14px;
+  }
+
+  #content .videos .playButton i {
+    font-size: 80px;
   }
 
   #content .videos .post-view-count {

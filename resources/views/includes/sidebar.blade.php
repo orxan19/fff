@@ -45,7 +45,7 @@
                 <div class="col-md-12">
                     <div class="most-viewed-header border-bottom mt-4">
                         <h2><a href="/featured"><span class="most-viewed-icon"><i class="fas fa-thumbs-up"></i> </span>
-                        Redaktorun seçimi</a></h2>
+                        Tovsiyye olunanlar</a></h2>
                     </div>
                 </div>
 
@@ -76,7 +76,7 @@
                 <div class="col-md-12">
                     <div class="most-viewed-header border-bottom mt-4">
                         <h2><span class="most-viewed-icon"><i class="fas fa-share-alt"></i> </span> Sosial
-                            şəbəkələrdə biz</h2>
+                            şəbəkələrimiz</h2>
                     </div>
                 </div>
 
