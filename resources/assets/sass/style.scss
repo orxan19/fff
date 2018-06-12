@@ -89,7 +89,7 @@ nav{
   }
 
   .logo{
-    height: 50px;
+    height: 30px;
     display: block;
   }
 
@@ -237,6 +237,7 @@ nav{
     font-size: 1.0em;
     border: none;
     cursor: pointer;
+    transition: opacity 0.4s ease;
 
     width: 32px;
     height: 32px;
@@ -256,12 +257,6 @@ nav{
   .slick-next {
     top: 45%;
     right: 10px;
-
-    transition: background-color, right 0.2s ease-in-out;
-
-    &:hover{
-
-    }
   }
 
 
@@ -269,13 +264,6 @@ nav{
     top: 45%;
     left: 10px;
 
-    transition: background-color, left 0.2s ease-in-out;
-
-
-    &:hover{
-
-
-    }
   }
 
 
@@ -625,7 +613,7 @@ nav{
   .footer-social{
     a{
       i{
-        padding: 10px;
+
         color: white;
         font-size: 20px;
       }

@@ -163,6 +163,17 @@ $(document).ready(function () {
             event.preventDefault();
         }
     });
+
+    // var contentHeight = $('.content-scrolling').height();
+    // var sidebarHeight = $('.sidebar-scrolling');
+    //
+    // $(window).scroll(function() {
+    //     var pageH = $('.page').height() - $(this).height();
+    //     var pageT = this.scrollY - $('.page').offset().top;
+    //
+    //     $('.sidebar-scrolling').scrollTop(pageT / pageH * ($('.sidebar-scrolling').height() - $(this).height()));
+    // });
+
 });
 
 /***/ })

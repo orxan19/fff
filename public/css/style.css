@@ -92,7 +92,7 @@ nav .navbar-toggler .navbar-toggler-icon {
 }
 
 nav .logo {
-  height: 50px;
+  height: 30px;
   display: block;
 }
 
@@ -222,6 +222,8 @@ nav button.confirm {
   font-size: 1.0em;
   border: none;
   cursor: pointer;
+  -webkit-transition: opacity 0.4s ease;
+  transition: opacity 0.4s ease;
   width: 32px;
   height: 32px;
   opacity: 0.6;
@@ -241,15 +243,11 @@ nav button.confirm {
 #main .slick-next {
   top: 45%;
   right: 10px;
-  -webkit-transition: background-color, right 0.2s ease-in-out;
-  transition: background-color, right 0.2s ease-in-out;
 }
 
 #main .slick-prev {
   top: 45%;
   left: 10px;
-  -webkit-transition: background-color, left 0.2s ease-in-out;
-  transition: background-color, left 0.2s ease-in-out;
 }
 
 #main a {
@@ -603,7 +601,6 @@ nav button.confirm {
 }
 
 #footer .footer-social a i {
-  padding: 10px;
   color: white;
   font-size: 20px;
 }

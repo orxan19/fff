@@ -1,4 +1,4 @@
-<div class="col-lg-4 col-md-4 scrol">
+<div class="col-lg-4 col-md-4 ">
     <div class="row">
         <div class="col-md-11">
             <div class="most-viewed-header border-bottom">
@@ -8,12 +8,14 @@
         </div>
 
         <div class="row">
-            <div class="container">
+            <div class="container sidebar-scrolling">
                 @foreach($most_viewed_posts as $post)
                 <div class="col-md-12 most-viewed-post">
                     <a href="/videos/{{ $post->slug }}">
-                        <div class="card">
-                            <img class="card-img-top" src="/{{ $post->image }}" alt="">
+                        <div class="card content-card">
+                            <div class="card-img-top" style="background-image: url('/{{ $post->image }}'); ">
+                                <div class="playButton"><i class="fas fa-play-circle"></i></div>
+                            </div>
                             <div class="card-body">
                                 <div class="row">
                                     <div><i class="fa fa-eye"></i> &nbsp;<span
@@ -52,8 +54,10 @@
                     @foreach($is_featured as $post)
                 <div class="col-md-12 most-viewed-post mt-4">
                     <a href="/videos/{{ $post->slug }}">
-                        <div class="card">
-                            <img class="card-img-top" src="/{{$post->image}}" alt="">
+                        <div class="card content-card">
+                            <div class="card-img-top" style="background-image: url('/{{ $post->image }}'); ">
+                                <div class="playButton"><i class="fas fa-play-circle"></i></div>
+                            </div>
                             <div class="card-body">
                                 <div class="row">
                                     <div><i class="fa fa-eye"></i> &nbsp;<span

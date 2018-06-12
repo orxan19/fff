@@ -49,9 +49,9 @@
 </div>
 
 <section id="content">
-    <div class="container">
+    <div class="container page">
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-8 content-scrolling">
 
                 @foreach($categories as $category)
 

@@ -29,7 +29,7 @@
                                         <div class="card content-card">
                                             <div class="card-img-top"
                                                  style="background-image: url('/{{ $post->image }}'); ">
-                                                <div class="playButton"><i class="fas fa-play"></i></div>
+                                                <div class="playButton"><i class="fas fa-play-circle"></i></div>
                                             </div>
                                             <div class="card-body">
                                                 <div class="row">
