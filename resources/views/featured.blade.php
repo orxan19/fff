@@ -21,7 +21,7 @@
                         <div class="row videos border-light mt-3">
                         @foreach($posts as $post)
                             <div class="col-md-6 col-lg-4 mt-4">
-                                <a href="/{{$post->slug}}">
+                                <a href="/videos/{{$post->slug}}">
                                     <div class="card content-card">
                                         <div class="card-img-top" style="background-image: url('/{{ $post->image }}'); ">
                                             <div class="playButton"><i class="fas fa-play-circle"></i></div>

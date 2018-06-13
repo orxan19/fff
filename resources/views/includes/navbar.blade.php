@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row px-2">
         <form class="searchForm" action="/query">
-            <input type="search" class="searchInput" name="query" autocomplete="off" placeholder="Hansi xeberi axtarmaq isterdiniz?" />
+            <input type="search" class="searchInput" name="query" autocomplete="off" placeholder="Hansı xəbəri axtarmaq istərdiniz?" />
             <button  class="closeForm"><i class="fas fa-times"></i></button>
         </form>
 
@@ -91,11 +91,6 @@
                             <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
                         </div>
                     </li>
-
-
-                    {{--<li class="nav-item ml-auto "><a href="" target="_blank"><i class="fab fa-facebook-f"></i></a></li>--}}
-                    {{--<li class="nav-item"><a href=""><i class="fab fa-twitter"></i></a></li>--}}
-                    {{--<li class="nav-item"><a href=""><i class="fab fa-instagram"></i></a></li>--}}
                 </ul>
 
 
@@ -104,76 +99,4 @@
 
         </div>
     </nav>
-    <style>
-        .searchForm{
-            width: 100%;
-            display:none;
-            transition: background-color 0.2s ease-in;
-            background:#1e1e1e;
-            padding:20px 42px;
-            text-align:center;
-            position:relative;
-            z-index: 1040;
-            margin-bottom: 20px;
-        }
-
-        .searchInput{
-            border:none;
-            padding:10px 0;
-            background:none;
-            color:white;
-            outline:none;
-            border-bottom:1px solid white;
-            width:80%;
-            font-size:26px;
-            font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-            font-weight: 300;
-        }
-
-        .searchButton{
-            background:none;
-            border:none;
-        }
-
-        .closeForm {
-            background: transparent;
-            color: #ffffff;
-            border: none;
-            font-size: 30px;
-
-
-        }
-
-        .closeForm:focus{
-            outline: none;
-        }
-
-        .searchButton{
-            font-size:36px;
-            color:white;
-        }
-
-        .searchInput::-webkit-input-placeholder {
-            color: rgba(255,255,255,0.6);
-            font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-            font-weight: 300;
-        }
-
-        .btn-search{
-            text-decoration:none;
-            background-color:transparent;
-            color:white;
-            cursor: pointer;
-            font-size: 24px ;
-            border-radius:0 0 2px 2px;
-            -webkit-transition: background-color 250ms ease-out, ;
-            -moz-transition: background-color 250ms ease-out;
-            -o-transition: background-color 250ms ease-out;
-            transition: background-color 250ms ease-out;
-        }
-
-        .btn-search:hover{
-
-        }
-    </style>
 </div>

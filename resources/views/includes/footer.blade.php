@@ -1,6 +1,6 @@
 <section id="footer">
     <div class="container">
-        <div class="row">
+        <div class="row pt-3 pb-3">
             <div class="col-md-5 align-content-start">
                 <div class="footer-law text-center text-md-left">
                     &copy; 2018 Hüquqları qorunur

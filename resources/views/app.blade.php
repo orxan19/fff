@@ -65,12 +65,29 @@
 
 <script src="/js/app.js"></script>
 <script src="/js/slick.min.js"></script>
+<script src="/js/sticky-kit.min.js"></script>
 <script src="/js/common.js"></script>
 <script>
-    $( document ).ready(function() {
 
-    });
+        // Sticky sidebar
+        if($(window).outerWidth() > 800) {
+            $(".hidvrap").stick_in_parent({
+                parent: ".site-content", // note: we must now manually provide the parent
+                spacer: ".site-right"
+            });
+        }
+        $(window).resize(function(){
+            if($(window).outerWidth() > 800) {
+                $(".hidvrap").stick_in_parent({
+                    parent: ".site-content", // note: we must now manually provide the parent
+                    spacer: ".site-right"
+                });
+            } else {
+                $(".hidvrap").trigger("sticky_kit:detach");
+            }
+        });
 
 </script>
 </body>
 </html>
+

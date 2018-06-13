@@ -3,6 +3,67 @@ body{
   overflow-x: hidden;
 }
 
+.searchForm{
+  width: 100%;
+  display:none;
+  transition: background-color 0.2s ease-in;
+  background:#03b3c1;
+  padding:20px 42px;
+  text-align:center;
+  position:relative;
+  z-index: 1040;
+  margin-bottom: 20px;
+}
+
+.searchInput{
+  border:none;
+  padding:10px 0;
+  background:none;
+  color:white;
+  outline:none;
+  border-bottom:1px solid white;
+  width:80%;
+  font-size:26px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+}
+
+.searchButton{
+  background:none;
+  border:none;
+}
+
+.closeForm {
+  background: transparent;
+  color: #ffffff;
+  border: none;
+  font-size: 30px;
+
+
+}
+
+.closeForm:focus{
+  outline: none;
+}
+.searchInput::-webkit-input-placeholder {
+  color: white;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 400;
+}
+
+.btn-search{
+  text-decoration:none;
+  background-color:transparent;
+  color:white;
+  cursor: pointer;
+  font-size: 24px ;
+  border-radius:0 0 2px 2px;
+  -webkit-transition: background-color 250ms ease-out, ;
+  -moz-transition: background-color 250ms ease-out;
+  -o-transition: background-color 250ms ease-out;
+  transition: background-color 250ms ease-out;
+}
+
 .toTop{
   background: #03b3c1;
   color: white;
@@ -57,18 +118,23 @@ body{
 
 nav{
 
-  .dropdown-menu{
-    border: 1px solid #03b3c1 ;
+
+
+  .dropdown-menu {
+    border: none;
+    //box-shadow: 10px 10px 33px -4px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 26px -8px rgba(0,0,0,0.23);
+    margin-bottom:10px;
     text-align: center;
 
-    .nav-item.dropdown-item{
+    .nav-item.dropdown-item {
       cursor: pointer;
     }
 
-    .nav-item.dropdown-item:hover{
+    .nav-item.dropdown-item:hover {
       background-color: lightblue;
 
-      .nav-link{
+      .nav-link {
         color: #03b3c1;
       }
     }

@@ -1,1 +1,1 @@
-<button class="btn toTop" id="myBtn" >Top</button>
+<button class="btn toTop px-3 py-2" id="myBtn" ><i class="fas fa-angle-up"></i></button>

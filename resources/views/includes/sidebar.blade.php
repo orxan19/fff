@@ -1,5 +1,6 @@
-<div class="col-lg-4 col-md-4 ">
-    <div class="row">
+<div class="col-lg-4 col-md-4 site-right">
+    <div class="hidvrap">
+    <div class="row sidebar">
         <div class="col-md-11">
             <div class="most-viewed-header border-bottom">
                 <h2><a href="/popular"><span class="most-viewed-icon"><i class="fas fa-bolt"></i></span> Ən çox izlənilənlər</a>
@@ -8,7 +9,7 @@
         </div>
 
         <div class="row">
-            <div class="container sidebar-scrolling">
+            <div class="container">
                 @foreach($most_viewed_posts as $post)
                 <div class="col-md-12 most-viewed-post">
                     <a href="/videos/{{ $post->slug }}">
@@ -37,17 +38,13 @@
 
                 <!-- Add here-->
 
-                <div class="col-md-12 most-viewed-post mt-4">
-                    <a href="">
-                        <img src="/images/adr2.png" class="img-fluid" alt="">
-                    </a>
-                </div>
+
 
                 <!-- end of Add-->
                 <div class="col-md-12">
                     <div class="most-viewed-header border-bottom mt-4">
                         <h2><a href="/featured"><span class="most-viewed-icon"><i class="fas fa-thumbs-up"></i> </span>
-                        Tovsiyye olunanlar</a></h2>
+                        Tövsiyyə olunan xəbərlər</a></h2>
                     </div>
                 </div>
 
@@ -104,4 +101,4 @@
         </div> <!-- end of row-->
     </div>
 </div>
-
+</div>

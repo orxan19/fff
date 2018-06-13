@@ -78,13 +78,13 @@ $('.responsive').slick({
 
     $('form').mouseenter(
         function () {
-            $(this).css({"background-color":"#302f2f"});
+            $(this).css({"background-color":"#03b3c1"});
         }
     );
 
     $('form').mouseout(
         function () {
-            $(this).css({"background-color":"#1e1e1e"});
+            $(this).css({"background-color":"#03b3c1"});
         }
     );
 
