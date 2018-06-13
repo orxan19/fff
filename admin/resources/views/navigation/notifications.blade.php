@@ -190,3 +190,24 @@
         <li class="footer"><a href="#">See All Messages</a></li>
     </ul>
 </li>
+<link rel="stylesheet" href="/css/loading-bar.css">
+<script src="/js/loading-bar.min.js"></script>
+<script
+        src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function(){
+        XMLHttpRequest.prototype.realSend = XMLHttpRequest.prototype.send;
+        XMLHttpRequest.prototype.send = function(value) {
+            $("#progress-b").show();
+            this.upload.onprogress = function(event) {
+                var proc=(event.loaded/event.total) * 100 ;
+                var progress = new ldBar('#progress-b');
+                progress.set(parseInt(proc));
+            }
+            this.realSend(value);
+        };
+
+    });
+</script>

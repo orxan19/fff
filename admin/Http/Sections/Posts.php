@@ -89,6 +89,9 @@ class Posts extends Section implements Initializable
             AdminFormElement::file('source','Source')->setUploadPath(function(\Illuminate\Http\UploadedFile $file) {
                 return 'videos';
             })->required(),
+            AdminColumn::custom('',function(){
+               return ' <div data-value="0" id="progress-b" style="display:none" data-preset="bubble" class="ldBar"></div>';
+            }),
             AdminFormElement::ckeditor('description', 'Description'),
             AdminFormElement::select('category_id', 'Category', Category::class)->setDisplay('name'),
             AdminFormElement::image('image', 'Şəkil')->setUploadSettings([
